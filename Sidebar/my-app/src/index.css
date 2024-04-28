@@ -1,0 +1,90 @@
+body {
+  background-color: rgb(235, 235, 235);
+  margin-top: 100px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page.sidebar-page {
+  background: #17132a;
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.4s;
+}
+
+.sidebar.open {
+  width: 260px;
+}
+
+.sidebar header {
+  display: flex;
+  gap: 20px;
+  background: #1f8e42;
+  padding: 10px 10px;
+}
+
+.sidebar-burger {
+  color: #f9f9f9;
+}
+
+.sidebar header img {
+  height: 28px;
+  width: 60%;
+  object-fit: contain;
+}
+
+.sidebar nav {
+  display: grid;
+  padding: 6px;
+  gap: 2px;
+}
+
+.sidebar nav > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #333333;
+}
+
+.sidebar nav > button:hover {
+  background: #1f8e42;
+  color: #ffffff;
+}
+
+.sidebar header > img,
+.sidebar nav > button p {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar.open :is(nav button p, header > img) {
+  opacity: 1;
+}
+
+.sidebar.open nav > button {
+  width: 100%;
+}
